@@ -1,6 +1,7 @@
 package com.example.moviereview.Controller;
 
 import com.example.moviereview.Service.ReviewService;
+import com.example.moviereview.dto.ReviewResponseDTO;
 import com.example.moviereview.entity.Review;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -25,17 +26,17 @@ public class ReviewController {
     }
 
     @GetMapping("/{id}")
-    public Review getById(@PathVariable Long id) {
+    public ReviewResponseDTO getById(@PathVariable Long id) {
         return reviewService.getReview(id);
     }
 
-    @GetMapping("/user/{userId}")
-    public List<Review> getByUser(@PathVariable Long userId) {
+    @GetMapping("/users/{userId}")
+    public List<ReviewResponseDTO> getByUser(@PathVariable Long userId) {
         return reviewService.getReviewsByUser(userId);
     }
 
-    @GetMapping("/movie/{movieId}")
-    public List<Review> getByMovie(@PathVariable Long movieId) {
+    @GetMapping("/movies/{movieId}")
+    public List<ReviewResponseDTO> getSimpleReviewsByMovie(@PathVariable Long movieId) {
         return reviewService.getReviewsByMovie(movieId);
     }
 
