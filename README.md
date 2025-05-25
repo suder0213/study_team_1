@@ -1,4 +1,5 @@
 # 🎬 Movie Review Site
+<img width="831" alt="image" src="https://github.com/user-attachments/assets/2f0fd9ca-0caa-4053-996b-e595f747e822" />
 
 Spring Boot 기반의 영화 리뷰 사이트입니다.
 
