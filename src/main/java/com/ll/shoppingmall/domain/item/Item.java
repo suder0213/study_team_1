@@ -21,6 +21,6 @@ public class Item {
     private long price;
     private String name;
 
-    @OneToMany(mappedBy = "item_id", cascade = CascadeType.ALL)
+    @OneToMany
     private List<OrdersItem> ordersItems;
 }

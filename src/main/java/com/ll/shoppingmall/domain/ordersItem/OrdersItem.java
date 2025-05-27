@@ -22,6 +22,5 @@ public class OrdersItem {
     private Orders orders;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "item_id")
     private Item items;
 }
